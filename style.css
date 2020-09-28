@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	background: #181818;
+	color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 300
+}
+
+#wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+/**/
+#left {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
+	height: 100vh;
+	justify-content: center;
+}
+
+/**/
+#right {
+	flex: 1;
+}
+
+/* Sign in -- left part */
+#signin {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 80%;
+	padding-bottom: 1rem;
+}
+
+#signin .logo {
+	margin-top: 48px;
+	margin-bottom: 8vh;
+}
+
+#signin .logo img {
+	width: 300px;
+}
+
+#signin form {
+	wdth: 80%;
+	padding-bottom: 3rem;
+}
+
+#signin label {
+	font-size: 0.9rem;
+	line-height: 2rem;
+	font-weight: 500;
+}
+
+#signin .text-input {
+	margin-bottom: 1.3rem;
+	width: 100%;
+	border-radius: 2px;
+	background: transparent;
+	border: 1px solid #555;
+	color: #ccc;
+	padding: 0.5rem 1rem;
+	line-height: 1.3rem;
+}
+
+#signin .text-input:focus {
+	outline: none 
+}
+
+/* 60% width */
+#signin .secondary-btn, 
+.or, 
+.links {
+	width: 60%;
+}
+
+#signin .links a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	margin-bottom: 1rem;
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+#signin .or {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 1.2rem;
+	align-items: center;
+}
+
+#signin .or .bar {
+	flex: auto;
+	border: none;
+	height: 1px;
+	background: #aaa;
+}
+
+#signin .or span {
+	color: #ccc;
+	padding: 0 0.8rem;
+}
+
+#main-footer {
+	font-size: 0.8rem;
+	color: #ccc;
+	text-align: center;
+	max-height: 80%;
+	padding-top: 0.10rem;
+}
+
+#main-footer a {
+	color: #ccc;
+}
+
+#main-footer a:hover {
+	color: #f96816;
+}
+
+/* Button */
+#signin .primary-btn {
+	width: 100%;
+}
+
+.primary-btn {
+	padding: 0.7rem 1rem;
+	height: 2.7rem;
+	display: block;
+	border: 0;
+	border-radius: 2px;
+	font-weight: 500;
+	background: #f96816;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.primary-btn:hover {
+	background: #ff7b39;
+}
+
+.secondary-btn {
+	padding: 0.7rem 1rem;
+	height: 2.7rem;
+	display: block;
+	border: 1px solid #f4f4f4;
+	border-radius: 2px;
+	font-weight: 500;
+	background: transparent;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.secondary-btn:hover {
+	border-color: #ff7b39;
+	color: #ff7b39;
+}
+
+/* Right  */
+.showcase {
+	background: url('./img/login-bg.jpg') no-repeat center center / cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 100vh;
+}
+
+.showcase .showcase-text {
+	font-size: 3.50rem;
+	width: 100%;
+	color: #fff;
+	margin-bottom: 1.5rem;
+}
+
+/*.showcase .secondary-btn {
+	width: 60%;
+}*/
+
+/* Media queries */
+@media screen and (min-width: 1200px) {
+	#left {
+		flex: 4;
+	}
+
+	#right {
+		flex: 6;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		overlow: auto;
+	}
+	#right {
+		display: none
+	}
+
+	#signin .logo {
+		margin-top: 0;
+	}
+
+	#signin form {
+		width: 100%;
+		padding-bottom: 3rem;
+	}
+
+	#left {
+		width: 100%;
+		justify-content: start;
+		margin-top: 2vh;
+	}
+}
